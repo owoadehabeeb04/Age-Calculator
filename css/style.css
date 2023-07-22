@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+
+
+:root{
+    --White: hsl(0, 0%, 100%);
+--Offwhite: hsl(0, 0%, 94%);
+--Lightgrey: hsl(0, 0%, 86%);
+--Smokeygrey: hsl(0, 1%, 44%);
+--Offblack: hsl(0, 0%, 8%);
+--Purple: hsl(259, 100%, 65%);
+--Lightred: hsl(0, 100%, 67%);
+}
+
+**{
+    margin: auto;
+    padding: auto;
+    box-sizing: border-box;
+}
+html {
+    font-family: 'poppins';
+    background-color: var(--Lightgrey);
+}
+.whole {
+
+width: fit-content;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+margin: 0 auto;
+margin-top: 5em;
+background-color: var(--White);
+
+/* box-shadow:   10px 1px 1px 1px var(--Offwhite);; */
+border-bottom-right-radius: 30%;
+padding:  2em 1em;
+}
+.the-calculator form {
+    display: flex;
+}
+
+.the-calculator form input {
+    width: 65%;
+    height: 50%;
+    padding: 0em 0.5em;
+border: 1px solid var(--Lightgrey);
+border-radius: 5px;
+    padding-top: 0.5em;
+    
+}
+
+.day_day {
+    margin-left: 0em;
+}
+input::placeholder {
+    color: var(--Smokeygrey);
+    font-weight: 700;
+    font-size: 2em;
+}
+input:focus {
+    border-radius: 1px solid var(--Lightgrey);
+}
+label {
+    color: var(--Smokeygrey);
+    font-weight: 700;
+    font-style: normal;
+}
+.error {
+    color: var(--Lightred);
+    font-size: 12px;
+    font-weight: 500;
+    font-style: italic;
+}
+.hidden {
+    visibility: hidden;
+}
+
+.errorlabel {
+    color: var(--Lightred);
+}
+.label {
+
+}
+.arrow {
+    margin-top: 4em;
+}
+.arrow button {
+    background-color: var(--Purple);
+    border: 2px solid var(--Purple);
+border-radius: 50%;
+padding: 0.7em;
+float: right;
+transform: translateY(-30px);
+}
+.line-arrow {
+    background-color: var(--Smokeygrey);
+    width: 100%;
+    padding: 0.05em;
+    justify-self: flex-start;
+}
+.yearno, .monthno, .dayno {
+    color: var(--Purple);
+
+    
+}
+.years {
+    font-weight: bolder;
+    font-size: 30px;
+    letter-spacing: normal;
+}
+a {
+    color: var(--Purple);
+}
+
