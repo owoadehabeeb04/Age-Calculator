@@ -10,6 +10,11 @@ const monthno = document.querySelector(".monthno");
 const dayno = document.querySelector(".dayno");
 console.log(yearno, monthno, dayno);
 const errorday = document.querySelector('.errorday')
+const errormonth = document.querySelector('.errormonth')
+const erroryear = document.querySelector('.erroryear')
+const labelday = document.querySelector('.labelday')
+const labelmonth = document.querySelector('.labelmonth')
+const labelyear = document.querySelector('.labelyear')
 
 btn.addEventListener("click", function (e) {
   e.preventDefault();
@@ -30,9 +35,20 @@ btn.addEventListener("click", function (e) {
   // Check if the number is a number.
   if (isNaN(inputdayValue)) {
     console.log("falsy");
-    inputday.style.border = '2px solid hsl(0, 100%, 67%)'
-    inputmonth.style.border = '2px solid hsl(0, 100%, 67%)'
-    inputyear.style.border = '2px solid hsl(0, 100%, 67%)'
+    inputday.classList.add('errorinput')
+    inputmonth.classList.add('errorinput')
+    inputyear.classList.add('errorinput')
+    inputday.classList.remove('successinput')
+    inputmonth.classList.remove('successinput')
+    inputyear.classList.remove('successinput')
+
+    labelday.classList.add('errorlabel')
+    labelmonth.classList.add('errorlabel')
+    labelyear.classList.add('errorlabel')
+
+    errorday.classList.remove('hidden')
+    errormonth.classList.remove('hidden')
+    erroryear.classList.remove('hidden')
   }
   // Check if the number is between 1 and 12.
   else if (
@@ -84,9 +100,21 @@ btn.addEventListener("click", function (e) {
     console.log(yearno.innerHTML = resultyear)
     console.log(monthno.innerHTML = resultmonth)
     console.log(dayno.innerHTML = resultdays)
-    inputday.style.border = '2px solid hsl(0, 0%, 86%);'
-    inputmonth.style.border = '2px solid hsl(0, 0%, 86%);'
-    inputyear.style.border = '2px solid hsl(0, 0%, 86%);'
+    inputday.classList.remove('errorinput')
+    inputmonth.classList.remove('errorinput')
+    inputyear.classList.remove('errorinput')
+    inputday.classList.add('successinput')
+    inputmonth.classList.add('successinput')
+    inputyear.classList.add('successinput')
+
+    
+    labelday.classList.remove('errorlabel')
+    labelmonth.classList.remove('errorlabel')
+    labelyear.classList.remove('errorlabel')
+
+    errorday.classList.add('hidden')
+    errormonth.classList.add('hidden')
+    erroryear.classList.add('hidden')
     }
   }
   else if (inputyearValue > year){
@@ -138,9 +166,19 @@ alert('check your yyyy input')
     console.log(yearno.innerHTML = resultyear)
     console.log(monthno.innerHTML = resultmonth)
     console.log(dayno.innerHTML = resultdays)
-    inputday.style.border = '2px solid hsl(0, 0%, 86%);'
-    inputmonth.style.border = '2px solid hsl(0, 0%, 86%);'
-    inputyear.style.border = '2px solid hsl(0, 0%, 86%);'
+    
+inputday.classList.remove('errorinput')
+inputmonth.classList.remove('errorinput')
+inputyear.classList.remove('errorinput')
+inputday.classList.add('successinput')
+    inputmonth.classList.add('successinput')
+    inputyear.classList.add('successinput')
+    labelday.classList.remove('errorlabel')
+    labelmonth.classList.remove('errorlabel')
+    labelyear.classList.remove('errorlabel')
+    errorday.classList.add('hidden')
+    errormonth.classList.add('hidden')
+    erroryear.classList.add('hidden')
   }
 });
 

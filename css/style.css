@@ -43,12 +43,17 @@ padding:  2em 1em;
     width: 65%;
     height: 50%;
     padding: 0em 0.5em;
-border: 1px solid var(--Lightgrey);
+
 border-radius: 5px;
     padding-top: 0.5em;
     
 }
-
+.successinput {
+    border: 2px solid var(--Smokeygrey); 
+}
+.errorinput {
+    border: 2px solid var(--Lightred);
+}
 .day_day {
     margin-left: 0em;
 }
@@ -110,5 +115,39 @@ transform: translateY(-30px);
 }
 a {
     color: var(--Purple);
+}
+.roll{
+animation: roll 3s linear infinite;
+}
+
+@keyframes roll {
+  0% {
+    transform: rotate(0deg) translateX(0);
+  }
+  100% {
+    transform: rotate(360deg) translateX(calc(100vw + 50px)); /* Moving the object to the right edge of the screen */
+  }
+}
+@media (max-width: 450px) {
+    .arrow button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        float: none;
+  margin: 0 auto;
+    }
+    .whole {
+        margin-top: 2em;
+    }
+}
+@media (max-width: 400px){
+h1 {
+    font-size: 1.7em;
+}
+}
+@media (max-width: 350px){
+h1 {
+    font-size: 1em;
+}
 }
 
