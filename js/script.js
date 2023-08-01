@@ -64,7 +64,7 @@ btn.addEventListener("click", function (e) {
   alert('invalid details try again !')
   }
   else if (inputyearValue === year){
-    if(inputmonthValue > month - 1 || inputdayValue > day) {
+    if(inputmonthValue > month  || inputdayValue > day) {
       console.log('false');
       alert('check your month input and day input again')
     } else {
