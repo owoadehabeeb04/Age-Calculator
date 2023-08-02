@@ -64,10 +64,32 @@ btn.addEventListener("click", function (e) {
   alert('invalid details try again !')
   }
   else if (inputyearValue === year){
-    if(inputmonthValue > month  || inputdayValue > day) {
+    if(inputmonthValue > month  ) {
       console.log('false');
       alert('check your month input and day input again')
-    } else {
+    } 
+   else if (inputmonthValue === month && inputdayValue > day){
+      alert('check your month input and day input again')
+    }
+else if (inputmonthValue < month && inputdayValue > day){
+
+  // function turnDateValues(dd, mm, yyyy) {
+  //   // Create a Date object from the three input values.
+  //   var date = new Date(yyyy, mm - 1, dd);
+  //   // Return the Date object.
+  //   return date;
+  // }
+
+  // // console.log(date);
+  // let resultyear = now.getFullYear() - date.getFullYear();
+  // let resultmonth = now.getMonth() - date.getMonth();
+  // let resultdays = now.getDate() - date.getDate();
+
+  // console.log(yearno.innerHTML = resultyear)
+  // console.log(monthno.innerHTML = resultmonth)
+  // console.log(dayno.innerHTML = resultdays)
+}
+    else {
       console.log('nice');
       console.log("nice");
       function turnDateValues(dd, mm, yyyy) {
